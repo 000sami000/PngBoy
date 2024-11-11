@@ -68,7 +68,7 @@ if(!user){
  
     </div>
     
-    <div className="w-full flex items-center justify-center text-[25px] text-[#000000] my-8 ">
+    <div className="w-full flex items-center justify-center text-[25px] text-[#787878] my-8 ">
         {posts?.numberofPages &&(
           <ReactPaginate
             breakLabel="..."
@@ -83,7 +83,7 @@ if(!user){
               <FaChevronLeft  className="text-[25px]"/> }
             className="flex gap-4  mx-5 items-center px-1 py-0 "
             pageClassName="bg-[white] px-4 py-0 rounded-md"
-            activeClassName="gray text-[black]"
+            activeClassName="text-[black] bg-[red] text-[30px]"
             nextClassName=""
             previousClassName=""
           />

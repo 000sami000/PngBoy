@@ -10,6 +10,7 @@ import {
 } from "react-icons/bs";
 import RightSidebar from "../RightSidebar";
 import { RightSidebarContext } from "../../RightSidebarProvider";
+import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 function Allposts({ setCurrent_id, dispatch, sortOrder, searchtext ,published}) {
   const { setCurrentid, Currentid,toggleSidebarRight,isSidebarOpenRight } = useContext(RightSidebarContext);
 
@@ -101,22 +102,22 @@ function Allposts({ setCurrent_id, dispatch, sortOrder, searchtext ,published}) 
           }
         </div>
       }
-      <div className="w-full flex items-center justify-center text-[25px] text-[#000000] my-8 ">
-        {posts?.numberofPages  &&(
+      <div className="w-full flex items-center justify-center text-[25px] text-[#787878] my-8 ">
+        {posts?.numberofPages &&(
           <ReactPaginate
             breakLabel="..."
             nextLabel={
-              <BsArrowRightSquareFill className="text-[#ff8839] text-[38px] bg-white rounded-md" />
-            }
+              <FaChevronRight className="text-[25px]"/>
+                 }
             onPageChange={handlePageClick}
             pageRangeDisplayed={5}
             pageCount={posts?.numberofPages}
             previousLabel={
-              <BsFillArrowLeftSquareFill className="text-[#ff8839] text-[38px] bg-white rounded-md" />
-            }
+               
+              <FaChevronLeft  className="text-[25px]"/> }
             className="flex gap-4  mx-5 items-center px-1 py-0 "
             pageClassName="bg-[white] px-4 py-0 rounded-md"
-            activeClassName="bg-[red] text-[green]"
+            activeClassName="text-[black] text-[30px]"
             nextClassName=""
             previousClassName=""
           />
